@@ -1,0 +1,75 @@
+*{
+    margin: 0;
+}
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+body{
+    min-height: 100vh;
+    background:#0c192c;
+}
+.containers{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.bubbles{
+    position: relative;
+    display: flex;
+}
+.bubbles span{
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: rgb(206, 206, 46);
+    margin: 0 4px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 10px #4fc3dc44,
+    0 0 50px #4fc3dc,
+    0 0 100px #4fc3dc;
+    animation: animate 15s linear infinite;
+    animation-duration: calc(25s/var(--i));
+}
+.container{
+    margin: auto;
+    width: 300px;
+    background-color: rgb(89, 0, 255);
+    padding: 20px 0;
+    border-radius: 6px;
+    margin-top: 190px;
+    color: white;
+    margin-right: 250px;
+}
+.content{
+    text-align: center;
+    font-weight: 600;
+    font-style: italic;
+}
+.form-login{
+    margin-top: 12px;
+    text-align: center;
+}
+.btn{
+    margin-top: 5px;
+    text-align: center;
+}
+.btn button{
+    padding: 5px;
+    background-color:bisque;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: translateY(100vh) scale(0);
+    }
+    100%
+    {
+        transform: translateY(-10vh) scale(1);
+    }
+}
